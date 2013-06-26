@@ -1,0 +1,29 @@
+// Colors
+$base:      #34495e;
+$firm:      #1abc9c;
+
+$gray:      #95a5a6;
+$lightgray: #ecf0f1;
+$inverse:   #fff;
+
+$success:   #2ecc71;
+$danger:    #e74c3c;
+$warning:   #f1c40f;
+$info:      #3498db;
+
+// Font
+$base-font-family: 'Lato', sans-serif;
+$base-font-size:   14px;
+
+// login
+$form-color: scale-color(desaturate($base, 15%), $lightness: 91%);
+
+// paging / pagination
+$pager-padding: 9px 18px 10px;
+$pagination-color: desaturate(lighten($base, 57.5%), 17%);
+
+// share
+$share-color: scale-color($base, $lightness: 92%);
+
+// video
+$controls-color: scale-color($base, $lightness: -15%);

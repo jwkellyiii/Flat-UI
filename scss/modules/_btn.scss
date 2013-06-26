@@ -1,0 +1,78 @@
+// Buttons -----------------------
+.btn {
+  border: none;
+  background: $base;
+  color: $inverse;
+  font-size: 16.5px;
+  text-decoration: none;
+  text-shadow: none;
+  @include flatui-box-shadow(none);
+  @include flatui-transition(0.25s);
+
+  &:hover,
+  &:focus {
+    background-color: scale-color($base, $lightness: 20%);
+    color: $inverse;
+    @include flatui-transition(0.25s);
+  }
+
+  &:active,
+  &.active {
+    background-color: scale-color($base, $lightness: -15%);
+    color: rgba($inverse, 0.75);
+    @include flatui-box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled] {
+    background-color: $gray;
+    color: $inverse;
+  }
+
+  // Sizes -----------------------
+  &.btn-large {
+    padding-bottom: 12px;
+    padding-top: 13px;
+  }
+
+  // Colors -----------------------
+  &.btn-primary {
+    @include flatui-button-states($firm);
+  }
+
+  &.btn-info {
+    @include flatui-button-states($info);
+  }
+
+  &.btn-danger {
+    @include flatui-button-states($danger);
+  }
+
+  &.btn-success {
+    @include flatui-button-states($success);
+  }
+
+  &.btn-warning {
+    @include flatui-button-states($warning);
+  }
+
+  // Button with icon inside
+  .btn-toolbar & {
+    font-size: 18px;
+    padding: 10px 14px 9px;
+
+    &:first-child {
+      @include flatui-border-radius(6px 0 0 6px);
+    }
+
+    &:last-child {
+      @include flatui-border-radius(0 6px 6px 0);
+    }
+  }
+}
+
+.btn-toolbar {
+  .btn.active {
+    color: $inverse;
+  }
+}

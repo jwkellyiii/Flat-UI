@@ -1,0 +1,34 @@
+// Progress bar
+.progress {
+  background: scale-color($base, $lightness: 90%);
+  border-radius: 32px;
+  height: 12px;
+  @include flatui-box-shadow(none);
+  @include flatui-drop-ie-gradient;
+
+  .bar {
+    background: $firm;
+    @include flatui-box-shadow(none !important);
+    @include flatui-drop-ie-gradient;
+  }
+
+  .bar-success {
+    background-color: $success;
+    @include flatui-drop-ie-gradient;
+  }
+
+  .bar-warning {
+    background-color: $warning;
+    @include flatui-drop-ie-gradient;
+  }
+
+  .bar-danger {
+    background-color: $danger;
+    @include flatui-drop-ie-gradient;
+  }
+
+  .bar-info {
+    background-color: $info;
+    @include flatui-drop-ie-gradient;
+  }
+}

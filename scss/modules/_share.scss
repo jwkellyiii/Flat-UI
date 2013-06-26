@@ -1,0 +1,40 @@
+// Sharing box include variety of ways to share something
+// By idea this block should have
+
+.share {
+  background-color: $share-color;
+  border-radius: 6px;
+  position: relative;
+  @include flatui-dropdown-arrow($share-color, -9px, 23px);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+  }
+
+  li {
+    padding-top: 11px;
+    @include flatui-clearfix;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .toggle {
+    float: right;
+    margin: 0;
+  }
+
+  .btn {
+    @include flatui-border-radius(0 0 6px 6px);
+  }
+}
+
+.share-label {
+  float: left;
+  font-size: 15px;
+  padding-top: 5px;
+  width: 50%;
+}

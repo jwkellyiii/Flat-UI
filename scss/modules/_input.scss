@@ -19,9 +19,8 @@ input[type="color"],
   color: $base;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  padding: 8px 0 9px 10px;
+  padding: 3px 5px;
   text-indent: 1px;
-  @include flatui-border-radius(6px);
   @include flatui-box-shadow(none);
   @include flatui-placeholder-color(desaturate(scale-color($base, $lightness: 60%), 15%));
 
@@ -62,4 +61,32 @@ input,
 textarea,
 .uneditable-input {
   width: 192px;
+}
+
+// input-prepend, input-append
+.input-append,
+.input-prepend {
+  .add-on {
+    padding: 3px 4px;
+    border: 2px solid scale-color($base, $lightness: 85%);;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    margin-top: 2px;
+  }
+}
+
+.input-prepend {
+  .add-on,
+  .btn {
+      margin-right: -2px;
+  }
+}
+
+.input-append {
+  .add-on,
+  .btn {
+      margin-left: -2px;
+  }
 }
